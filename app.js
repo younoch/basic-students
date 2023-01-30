@@ -38,6 +38,7 @@ app.use(limiter);
 
 let URI = "mongodb://127.0.0.1/Students"
 let OPTIONS = { user: '', pass: '' }
+mongoose.set("strictQuery", false);
 
 mongoose.connect(URI, OPTIONS, (err)=> {
     if (err) {
