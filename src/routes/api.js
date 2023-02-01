@@ -9,11 +9,12 @@ const router = express.Router();
 router.get("/hello-get" , HelloController.Hello);
 router.post("/hello-post", HelloController.Hello);
 
-console.log(StudentsController.InsertsStudents);
-
 
 // Mongoses
 
-router.post("/insert-student", StudentsController.InsertsStudents)
+router.post("/insert-student", StudentsController.InsertsStudents);
+router.get("/read-student", StudentsController.ReadStudents);
+router.post("/update-student/:id", StudentsController.UpdateStudents);
+router.get("/delete-student/:id", StudentsController.DeleteStudents);
 
 module.exports = router

@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
 
 const DataSchema = mongoose.Schema({
-    Name: String,
-    Roll: String,
-    Class: String,
-    Remarks: String
+    name: String,
+    roll: String,
+    class: String,
+    remarks: String
 });
 
 const studentsModel = mongoose.model('students', DataSchema);
