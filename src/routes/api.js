@@ -9,7 +9,6 @@ const router = express.Router();
 router.get("/hello-get" , HelloController.Hello);
 router.post("/hello-post", HelloController.Hello);
 
-
 // Mongoses
 
 router.post("/insert-student", StudentsController.InsertsStudents);
