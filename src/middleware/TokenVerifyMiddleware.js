@@ -2,7 +2,7 @@
 
 const jwt = require("jsonwebtoken");
 
-module.exports=(req,res)=>{
+module.exports=(req,res,next)=>{
 
     let Token= req.headers['token-key']
 
@@ -11,7 +11,8 @@ module.exports=(req,res)=>{
             res.status(401).json({status:"invalid token",data:err})
         }
         else {
-            res.status(200).json({status: "valid token", data: decoded})
+            next()
         }
     })
+
 }
